@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D39D2DAA-88BC-4D67-AA90-3E74290A7DDF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ArduPilotFEEG3003</RootNamespace>
+    <AssemblyName>ArduPilotFEEG3003</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ArduPlane\createTags" />
+    <None Include="ArduPlane\Makefile.waf" />
+    <None Include="ArduPlane\wscript" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ArduPlane\afs_plane.cpp" />
+    <Content Include="ArduPlane\afs_plane.h" />
+    <Content Include="ArduPlane\altitude.cpp" />
+    <Content Include="ArduPlane\AP_Arming.cpp" />
+    <Content Include="ArduPlane\AP_Arming.h" />
+    <Content Include="ArduPlane\ArduPlane.cpp" />
+    <Content Include="ArduPlane\Attitude.cpp" />
+    <Content Include="ArduPlane\avoidance_adsb.cpp" />
+    <Content Include="ArduPlane\avoidance_adsb.h" />
+    <Content Include="ArduPlane\commands.cpp" />
+    <Content Include="ArduPlane\commands_logic.cpp" />
+    <Content Include="ArduPlane\config.h" />
+    <Content Include="ArduPlane\control_modes.cpp" />
+    <Content Include="ArduPlane\defines.h" />
+    <Content Include="ArduPlane\ekf_check.cpp" />
+    <Content Include="ArduPlane\events.cpp" />
+    <Content Include="ArduPlane\failsafe.cpp" />
+    <Content Include="ArduPlane\fence.cpp" />
+    <Content Include="ArduPlane\GCS_Mavlink.cpp" />
+    <Content Include="ArduPlane\GCS_Mavlink.h" />
+    <Content Include="ArduPlane\GCS_Plane.cpp" />
+    <Content Include="ArduPlane\GCS_Plane.h" />
+    <Content Include="ArduPlane\is_flying.cpp" />
+    <Content Include="ArduPlane\Log.cpp" />
+    <Content Include="ArduPlane\mode.cpp" />
+    <Content Include="ArduPlane\mode.h" />
+    <Content Include="ArduPlane\mode_acro.cpp" />
+    <Content Include="ArduPlane\mode_auto.cpp" />
+    <Content Include="ArduPlane\mode_autotune.cpp" />
+    <Content Include="ArduPlane\mode_avoidADSB.cpp" />
+    <Content Include="ArduPlane\mode_circle.cpp" />
+    <Content Include="ArduPlane\mode_cruise.cpp" />
+    <Content Include="ArduPlane\mode_fbwa.cpp" />
+    <Content Include="ArduPlane\mode_fbwb.cpp" />
+    <Content Include="ArduPlane\mode_guided.cpp" />
+    <Content Include="ArduPlane\mode_loiter.cpp" />
+    <Content Include="ArduPlane\mode_LoiterAltQLand.cpp" />
+    <Content Include="ArduPlane\mode_manual.cpp" />
+    <Content Include="ArduPlane\mode_qacro.cpp" />
+    <Content Include="ArduPlane\mode_qautotune.cpp" />
+    <Content Include="ArduPlane\mode_qhover.cpp" />
+    <Content Include="ArduPlane\mode_qland.cpp" />
+    <Content Include="ArduPlane\mode_qloiter.cpp" />
+    <Content Include="ArduPlane\mode_qrtl.cpp" />
+    <Content Include="ArduPlane\mode_qstabilize.cpp" />
+    <Content Include="ArduPlane\mode_rtl.cpp" />
+    <Content Include="ArduPlane\mode_stabilize.cpp" />
+    <Content Include="ArduPlane\mode_takeoff.cpp" />
+    <Content Include="ArduPlane\mode_thermal.cpp" />
+    <Content Include="ArduPlane\mode_training.cpp" />
+    <Content Include="ArduPlane\motor_test.cpp" />
+    <Content Include="ArduPlane\navigation.cpp" />
+    <Content Include="ArduPlane\parachute.cpp" />
+    <Content Include="ArduPlane\Parameters.cpp" />
+    <Content Include="ArduPlane\Parameters.h" />
+    <Content Include="ArduPlane\Plane.cpp" />
+    <Content Include="ArduPlane\Plane.h" />
+    <Content Include="ArduPlane\qautotune.cpp" />
+    <Content Include="ArduPlane\qautotune.h" />
+    <Content Include="ArduPlane\quadplane.cpp" />
+    <Content Include="ArduPlane\quadplane.h" />
+    <Content Include="ArduPlane\radio.cpp" />
+    <Content Include="ArduPlane\RC_Channel.cpp" />
+    <Content Include="ArduPlane\RC_Channel.h" />
+    <Content Include="ArduPlane\ReleaseNotes.txt" />
+    <Content Include="ArduPlane\reverse_thrust.cpp" />
+    <Content Include="ArduPlane\sensors.cpp" />
+    <Content Include="ArduPlane\servos.cpp" />
+    <Content Include="ArduPlane\soaring.cpp" />
+    <Content Include="ArduPlane\system.cpp" />
+    <Content Include="ArduPlane\tailsitter.cpp" />
+    <Content Include="ArduPlane\tailsitter.h" />
+    <Content Include="ArduPlane\takeoff.cpp" />
+    <Content Include="ArduPlane\tiltrotor.cpp" />
+    <Content Include="ArduPlane\tiltrotor.h" />
+    <Content Include="ArduPlane\transition.h" />
+    <Content Include="ArduPlane\tuning.cpp" />
+    <Content Include="ArduPlane\tuning.h" />
+    <Content Include="ArduPlane\version.h" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
