@@ -26,32 +26,33 @@ public:
         CIRCLE        = 1,
         STABILIZE     = 2,
         TRAINING      = 3,
-        ACRO          = 4,
+        MICROG        = 4,
         FLY_BY_WIRE_A = 5,
         FLY_BY_WIRE_B = 6,
         CRUISE        = 7,
         AUTOTUNE      = 8,
-        AUTO          = 10,
-        RTL           = 11,
-        LOITER        = 12,
-        TAKEOFF       = 13,
-        AVOID_ADSB    = 14,
-        GUIDED        = 15,
-        INITIALISING  = 16,
+        AUTO          = 9,
+        RTL           = 10,
+        LOITER        = 11,
+        TAKEOFF       = 12,
+        AVOID_ADSB    = 13,
+        GUIDED        = 14,
+        INITIALISING  = 15,
+        ACRO          = 25,
 #if HAL_QUADPLANE_ENABLED
-        QSTABILIZE    = 17,
-        QHOVER        = 18,
-        QLOITER       = 19,
-        QLAND         = 20,
-        QRTL          = 21,
+        QSTABILIZE    = 16,
+        QHOVER        = 17,
+        QLOITER       = 18,
+        QLAND         = 19,
+        QRTL          = 20,
 #if QAUTOTUNE_ENABLED
-        QAUTOTUNE     = 22,
+        QAUTOTUNE     = 21,
 #endif
-        QACRO         = 23,
+        QACRO         = 22,
 #endif
-        THERMAL       = 24,
+        THERMAL       = 23,
 #if HAL_QUADPLANE_ENABLED
-        LOITER_ALT_QLAND = 25,
+        LOITER_ALT_QLAND = 24,
 #endif
     };
 
@@ -276,6 +277,26 @@ public:
     Number mode_number() const override { return Number::CIRCLE; }
     const char *name() const override { return "CIRCLE"; }
     const char *name4() const override { return "CIRC"; }
+
+    // methods that affect movement of the vehicle in this mode
+    void update() override;
+
+    bool does_auto_navigation() const override { return true; }
+
+    bool does_auto_throttle() const override { return true; }
+
+protected:
+
+    bool _enter() override;
+};
+
+class ModeMicroG: public Mode
+{
+public:
+
+    Number mode_number() const override { return Number::MICROG; }
+    const char *name() const override { return "MICROG"; }
+    const char *name4() const override { return "MICRO"; }
 
     // methods that affect movement of the vehicle in this mode
     void update() override;

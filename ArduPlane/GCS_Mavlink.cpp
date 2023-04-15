@@ -58,6 +58,7 @@ MAV_MODE GCS_MAVLINK_Plane::base_mode() const
     case Mode::Number::AVOID_ADSB:
     case Mode::Number::GUIDED:
     case Mode::Number::CIRCLE:
+    case Mode::Number::MICROG:
     case Mode::Number::TAKEOFF:
 #if HAL_QUADPLANE_ENABLED
     case Mode::Number::QRTL:

@@ -29,6 +29,7 @@ void Plane::failsafe_short_on_event(enum failsafe_state fstype, ModeReason reaso
     case Mode::Number::MANUAL:
     case Mode::Number::STABILIZE:
     case Mode::Number::ACRO:
+    case Mode::Number::MICROG:
     case Mode::Number::FLY_BY_WIRE_A:
     case Mode::Number::AUTOTUNE:
     case Mode::Number::FLY_BY_WIRE_B:
@@ -116,6 +117,7 @@ void Plane::failsafe_long_on_event(enum failsafe_state fstype, ModeReason reason
     case Mode::Number::MANUAL:
     case Mode::Number::STABILIZE:
     case Mode::Number::ACRO:
+    case Mode::Number::MICROG:
     case Mode::Number::FLY_BY_WIRE_A:
     case Mode::Number::AUTOTUNE:
     case Mode::Number::FLY_BY_WIRE_B:

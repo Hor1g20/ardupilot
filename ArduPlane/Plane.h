@@ -159,6 +159,7 @@ public:
     friend class ModeTakeoff;
     friend class ModeThermal;
     friend class ModeLoiterAltQLand;
+    friend class ModeMicroG;
 
     Plane(void);
 
@@ -261,6 +262,7 @@ private:
     ModeStabilize mode_stabilize;
     ModeTraining mode_training;
     ModeAcro mode_acro;
+    ModeMicroG mode_MicroG;
     ModeFBWA mode_fbwa;
     ModeFBWB mode_fbwb;
     ModeCruise mode_cruise;
