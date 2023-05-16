@@ -455,7 +455,7 @@ const AP_Param::Info Plane::var_info[] = {
     // @Param: FLTMODE1
     // @DisplayName: FlightMode1
     // @Description: Flight mode for switch position 1 (910 to 1230 and above 2049)
-    // @Values: 0:Manual,1:CIRCLE,2:STABILIZE,3:TRAINING,4:MICROG,5:FBWA,6:FBWB,7:CRUISE,8:AUTOTUNE,10:Auto,11:RTL,12:Loiter,13:TAKEOFF,14:AVOID_ADSB,15:Guided,17:QSTABILIZE,18:QHOVER,19:QLOITER,20:QLAND,21:QRTL,22:QAUTOTUNE,23:QACRO,24:THERMAL,25:Loiter to QLand
+    // @Values: 0:Manual,1:CIRCLE,2:STABILIZE,3:TRAINING,4:ACRO,5:FBWA,6:FBWB,7:CRUISE,8:AUTOTUNE,10:Auto,11:RTL,12:Loiter,13:TAKEOFF,14:AVOID_ADSB,15:Guided,17:QSTABILIZE,18:QHOVER,19:QLOITER,20:QLAND,21:QRTL,22:QAUTOTUNE,23:QACRO,24:THERMAL,25:Loiter to QLand,26:MicroG
     // @User: Standard
     GSCALAR(flight_mode1,           "FLTMODE1",       FLIGHT_MODE_1),
 
@@ -475,7 +475,7 @@ const AP_Param::Info Plane::var_info[] = {
     // @CopyFieldsFrom: FLTMODE1
     // @DisplayName: FlightMode4
     // @Description: Flight mode for switch position 4 (1491 to 1620)
-    GSCALAR(flight_mode4,           "FLTMODE4",       Mode::Number::MICROG),
+    GSCALAR(flight_mode4,           "FLTMODE4",       FLIGHT_MODE_4),
 
     // @Param: FLTMODE5
     // @CopyFieldsFrom: FLTMODE1
